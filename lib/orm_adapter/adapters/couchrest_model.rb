@@ -49,7 +49,7 @@ module CouchRest
           if conditions.keys.first == :id
             get(conditions.values.first)
           else
-            send("by_#{conditions.keys.first}", {:key => conditions.values.first})
+            klass.send("by_#{conditions.keys.first}", {:key => conditions.values.first})
           end
         end
 
