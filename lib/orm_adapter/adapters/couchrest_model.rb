@@ -50,7 +50,7 @@ module CouchRest
             get(conditions.values.first)
           else
             descending = conditions.delete(:descending)
-            klass.send("by_#{conditions.keys.first}", {:key => conditions.values.first, descending: descending})
+            klass.send("by_#{conditions.keys.first}", {:key => conditions.values.first, descending: descending}).all
           end
         end
 
