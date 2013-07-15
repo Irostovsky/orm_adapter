@@ -40,8 +40,7 @@ module CouchRest
           if conditions.keys.first == :id
             get(conditions.values.first)
           else
-            descending = conditions.delete(:descending)
-            klass.send("by_#{conditions.keys.first}", {:key => conditions.values.first, descending: descending})
+            klass.send "find_by_#{conditions.keys.first}".to_sym, conditions.values.first
           end
         end
 
@@ -50,7 +49,8 @@ module CouchRest
           if conditions.keys.first == :id
             get(conditions.values.first)
           else
-            klass.send("by_#{conditions.keys.first}", {:key => conditions.values.first})
+            descending = conditions.delete(:descending)
+            klass.send("by_#{conditions.keys.first}", {:key => conditions.values.first, descending: descending})
           end
         end
 
