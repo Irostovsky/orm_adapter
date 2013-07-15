@@ -8,8 +8,8 @@ Gem::Specification.new do |s|
   s.authors = ["Ian White", "Jose Valim"]
   s.description = "Provides a single point of entry for using basic features of ruby ORMs"
   s.summary = "orm_adapter provides a single point of entry for using basic features of popular ruby ORMs.  Its target audience is gem authors who want to support many ruby ORMs."
-  s.email = "ian.w.white@gmail.com"
-  s.homepage = "http://github.com/ianwhite/orm_adapter"
+  s.email = "ivan.rostovsky@gmail.com"
+  s.homepage = ""
 
   s.rubyforge_project = "orm_adapter"
   s.required_rubygems_version = ">= 1.3.6"
